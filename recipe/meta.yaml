@@ -1,4 +1,4 @@
-{% set version = '0.3.12' %}
+{% set version = '0.3.20' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -10,13 +10,14 @@ package:
 source:
   fn: aws.s3_{{ version }}.tar.gz
   url:
+    - https://github.com/cloudyr/cloudyr.github.io/raw/master/drat/src/contrib/aws.s3_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/aws.s3_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/aws.s3/aws.s3_{{ version }}.tar.gz
-  sha256: 348fbbd976b5bcfbb60024864b5859fa3fce6071d5204667ff158296614cd1f9
+  sha256: 03f46497015709c317f6390d2035a4f0a5a6076cae9466f45f0ba6362250e766
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
 
   rpaths:
     - lib/R/lib/
@@ -30,6 +31,7 @@ requirements:
     - r-base
     - r-aws.signature >=0.3.7
     - r-base64enc
+    - r-curl
     - r-digest
     - r-httr
     - r-xml2 >1.0.0
@@ -38,6 +40,7 @@ requirements:
     - r-base
     - r-aws.signature >=0.3.7
     - r-base64enc
+    - r-curl
     - r-digest
     - r-httr
     - r-xml2 >1.0.0
