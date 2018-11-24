@@ -25,8 +25,6 @@ build:
 
 requirements:
   build:
-    - {{posix}}zip               # [win]
-
   host:
     - r-base
     - r-aws.signature >=0.3.7
