@@ -8,7 +8,6 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: aws.s3_{{ version }}.tar.gz
   url:
     - https://github.com/cloudyr/cloudyr.github.io/raw/master/drat/src/contrib/aws.s3_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/aws.s3_{{ version }}.tar.gz
@@ -16,16 +15,16 @@ source:
   sha256: 03f46497015709c317f6390d2035a4f0a5a6076cae9466f45f0ba6362250e766
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
-  number: 1000
-
+  number: 1001
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
   host:
     - r-base
     - r-aws.signature >=0.3.7
@@ -34,7 +33,6 @@ requirements:
     - r-digest
     - r-httr
     - r-xml2 >1.0.0
-
   run:
     - r-base
     - r-aws.signature >=0.3.7
@@ -55,13 +53,8 @@ about:
   summary: A simple client package for the Amazon Web Services ('AWS') Simple Storage Service
     ('S3') 'REST' 'API' <https://aws.amazon.com/s3/>.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
+    - conda-forge/r
