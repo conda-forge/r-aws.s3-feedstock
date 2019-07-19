@@ -12,11 +12,11 @@ source:
     - https://github.com/cloudyr/cloudyr.github.io/raw/master/drat/src/contrib/aws.s3_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/aws.s3_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/aws.s3/aws.s3_{{ version }}.tar.gz
-  sha256: 03f46497015709c317f6390d2035a4f0a5a6076cae9466f45f0ba6362250e766
+  sha256: 36bf103ae4104646adeee0c02777e6596418a80069448e10b2bd156a3877be40
 
 build:
   merge_build_host: True  # [win]
-  number: 1001
+  number: 1002
   noarch: generic
   rpaths:
     - lib/R/lib/
