@@ -1,4 +1,4 @@
-{% set version = '0.3.20' %}
+{% set version = "0.3.21" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,11 +12,11 @@ source:
     - https://github.com/cloudyr/cloudyr.github.io/raw/master/drat/src/contrib/aws.s3_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/aws.s3_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/aws.s3/aws.s3_{{ version }}.tar.gz
-  sha256: 36bf103ae4104646adeee0c02777e6596418a80069448e10b2bd156a3877be40
+  sha256: 095e64759ec7b4f5f8ac0cefe5ebc1a965663b0b7a1e9f3c42f1ba53acfb09ff
 
 build:
-  merge_build_host: True  # [win]
-  number: 1002
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -50,10 +50,9 @@ test:
 about:
   home: https://github.com/cloudyr/aws.s3
   license: GPL (>= 2)
-  summary: A simple client package for the Amazon Web Services ('AWS') Simple Storage Service
-    ('S3') 'REST' 'API' <https://aws.amazon.com/s3/>.
+  summary: A simple client package for the Amazon Web Services ('AWS') Simple Storage Service ('S3') 'REST' 'API' <https://aws.amazon.com/s3/>.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
