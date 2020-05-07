@@ -12,7 +12,7 @@ source:
     - https://github.com/cloudyr/cloudyr.github.io/raw/master/drat/src/contrib/aws.s3_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/aws.s3_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/aws.s3/aws.s3_{{ version }}.tar.gz
-  sha256: 095e64759ec7b4f5f8ac0cefe5ebc1a965663b0b7a1e9f3c42f1ba53acfb09ff
+  sha256: 8726a9be5e27c1e01e38fae7d86e67e634e39fb043b4a78cb1f8080b6b2e9187
 
 build:
   merge_build_host: true  # [win]
@@ -49,7 +49,7 @@ test:
 
 about:
   home: https://github.com/cloudyr/aws.s3
-  license: GPL (>= 2)
+  license: GPL-2-or-later
   summary: A simple client package for the Amazon Web Services ('AWS') Simple Storage Service ('S3') 'REST' 'API' <https://aws.amazon.com/s3/>.
   license_family: GPL3
   license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
