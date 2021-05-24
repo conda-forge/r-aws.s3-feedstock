@@ -1,5 +1,4 @@
 {% set version = "0.3.21" %}
-
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -49,7 +48,7 @@ test:
 
 about:
   home: https://github.com/cloudyr/aws.s3
-  license: GPL-2-or-later
+  license: GPL-2.0-or-later
   summary: A simple client package for the Amazon Web Services ('AWS') Simple Storage Service ('S3') 'REST' 'API' <https://aws.amazon.com/s3/>.
   license_family: GPL3
   license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
