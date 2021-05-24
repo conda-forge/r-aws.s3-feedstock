@@ -3,7 +3,7 @@ About r-aws.s3
 
 Home: https://github.com/cloudyr/aws.s3
 
-Package license: GPL-2-or-later
+Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-aws.s3-feedstock/blob/master/LICENSE.txt)
 
