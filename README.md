@@ -1,11 +1,11 @@
-About r-aws.s3
-==============
+About r-aws.s3-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-aws.s3-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/cloudyr/aws.s3
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-aws.s3-feedstock/blob/main/LICENSE.txt)
 
 Summary: A simple client package for the Amazon Web Services ('AWS') Simple Storage Service ('S3') 'REST' 'API' <https://aws.amazon.com/s3/>.
 
